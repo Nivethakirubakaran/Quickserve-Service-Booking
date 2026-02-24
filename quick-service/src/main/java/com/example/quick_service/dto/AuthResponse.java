@@ -1,0 +1,13 @@
+package com.example.quick_service.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+import java.time.Instant;
+
+@Data
+@AllArgsConstructor
+public class AuthResponse {
+    private String token;
+    private Instant expiresAt;
+}
