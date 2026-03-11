@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="=UTF-8">
+    <meta name="viewport" content="'width=device-width,initial-scale=1.0">
+    <title>QuickServe - Home</title>
+    
+    
+
+
+
+
+
+    
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <!--NAV-->
+    <nav>
+        <a href="home.html" class="logo">
+            <div class="logo-icon">⚡</div>
+            <div class="logo-text">Quick<span>Serve</span></div>
+        </a>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="categories.html">Service categories</a>
+        </div>
+        <div class="nav-right">
+            <div class="nav-location" id="navLocation">📍 Detecting... ▾</div>
+            <div class="avatar">👤</div>
+        </div>
+    </nav>
+    <!--hero-->
+    <section class="hero">
+        <div class="hero-badge">Location-based service matching</div>
+        <h1>Find<span class="highlight">Trusted Services</span><br>Right Near You</h1>
+
+        <div class="search-wrap">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search for a service or provider.." id="searchInput">
+                <div class="search-divider"></div>
+                <div class="search-location" id="searchLocation">📍 Detecting...</div>
+                <button class="search-btn" onclick="window.location.href='listing.html'">Search</button>
+            </div>
+        </div>
+        <div class="search-tags">
+            <span>Popular:</span>
+            <div class="tag" onclick="window.location.href='plumbing.html'">Plumbing</div>
+            <div class="tag" onclick="window.location.href='electrical.html'">Electrical</div>
+        </div>
+    </section>
+
+
+    <!--Categories-->
+    <div class="section">
+        <div class="section-header">
+            <h2>Browse by Category</h2>
+            <a href="categories.html" class="see-all">View all categories</a>
+        </div>
+        <div class="categories-grid">
+            <a href="plumbing.html" class="cat-card"
+                style="--cat-color: rgba(59,130,246,0.2); --cat-border: rgba(59,130,246,0.4);">
+                <div class="cat-icon" style="background: rgba(59,130,246,0.2);">🔧</div>
+                <div class="cat-name">Plumbing</div>
+                <div class="cat-count">10 providers</div>
+            </a>
+            <a href="electrical.html" class="cat-card"
+                style="--cat-color: rgba(251,191,36,0.2); --cat-border: rgba(251,191,36,0.4);">
+                <div class="cat-icon" style="background: rgba(251,191,36,0.2);">⚡</div>
+                <div class="cat-name">Electrical</div>
+                <div class="cat-count">11 providers</div>
+            </a>
+            <a href="cleaning.html" class="cat-card"
+                style="--cat-color: rgba(34,197,94,0.2); --cat-border: rgba(34,197,94,0.4);">
+                <div class="cat-icon" style="background: rgba(34, 197, 94, 0.2);">🧹</div>
+                <div class="cat-name">Cleaning</div>
+                <div class="cat-count">11 providers</div>
+            </a>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer-cta">
+        <div class="cta-text">
+            <h2>Become a Provider</h2>
+            <p>Offer your skills & earn more with QuickServe's platform</p>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+    <script src="location.js"></script>
+</body>
+
+</html>

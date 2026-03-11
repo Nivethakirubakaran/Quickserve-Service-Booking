@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="=UTF-8">
+        <meta name="viewport" content="'width=device-width,initial-scale=1.0">
+        <title>QuickServe - Home</title>
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="ac.css">
+    </head>
+    <body>
+
+        <!--nav-->
+        <nav>
+            <a href="home.html" class="logo">
+                <div class="logo-icon">⚡</div>
+                <div class="logo-text">Quick<span>Serve</span></div>
+            </a> 
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="categories.html">Service categories</a>
+            </div>
+            <div class="nav-right">
+                <div class="nav-location" id="navLocation">📍 Detecting... ▾</div>
+                <div class="avatar">👤</div>
+            </div>
+        </nav>
+
+        <!-- SEARCH STRIP -->
+        <div class="search-strip">
+            <div class="sbox">
+                <span>🔍</span>
+                <input type="text" id="searchInput" placeholder="Search service or provider…">
+            </div>
+            <div class="sbox sbox-loc">
+                <span>📍</span>
+                <input type="text" id="locationInput" placeholder="Detecting location...">
+            </div>
+            <button class="btn-go" id="searchBtn">Search</button>
+            <div class="results-info"><strong id="resultCount">0</strong> providers found</div>
+                <select class="sort-sel" id="sortSel">
+                    <option value="rating">Top Rated</option>
+                    <option value="price_low">Price: Low → High</option>
+                    <option value="price_high">Price: High → Low</option>
+                    <option value="distance">Nearest First</option>
+                    <option value="jobs">Most Jobs Done</option>
+                </select>
+        </div>
+
+        <!--Main layout-->
+        <div class="main-layout">
+
+            <!--sidebar-->
+            <aside class="sidebar">
+                <div class="sb-title">
+                    Filters
+                    <button id="clearBtn">Clear All</button>
+                </div>
+                <div class="f-section">
+                    <div class="f-label">Category</div>
+                    <div class="cat-items" id="catItems">
+                    <div class="cat-item" data-cat="Plumbing"><div class="cat-item-left">🔧 Plumbing</div><span class="cnt-badge">142</span></div>
+
+                    </div>
+                    </div>
+
+                <div class="f-section">
+                    <div class="f-label">Max Price / Hour</div>
+                    <div class="range-wrap">
+                        <div class="range-labels"><span>₹100</span><span id="priceDisplay">₹3,000</span></div>
+                        <input type="range" id="priceRange" min="100" max="3000"  step="50" value="3000">
+                    </div>
+                </div>
+
+                <div class="f-section">
+                    <div class="f-label">Max Distance</div>
+                    <div class="range-wrap">
+                        <div class="range-labels"><span>0 km</span><span id="distDisplay">20 km</span></div>
+                        <input type="range" id="distRange" min="1" max="20" step="1" value="20">
+                    </div>
+
+                    
+                </div>
+                <button class="btn-apply" id="applyBtn">Apply Filters</button>
+            </aside>
+
+            <!-- RESULTS -->
+            <div class="results-area">
+                <div class="quick-tabs" id="quickTabs">
+                    <div class="qtab" data-cat="Plumbing">🔧 Plumbing</div>
+                </div>
+
+                <div class="no-results" id="noResults" style="display:none;">
+                    <div class="nr-icon">🔍</div>
+                    <h3>No providers found</h3>
+                    <p>Try adjusting your filters or search term.</p>
+                    <button class="btn-reset" id="resetBtn">Reset Filters</button>
+                </div>
+
+                <div class="plist" id="plist"></div>
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </div>
+
+        
+        
+        <!-- TOAST -->
+        <div class="toast" id="toast">
+            <span class="toast-icon" id="tIcon"></span>
+            <span class="toast-msg" id="tMsg"></span>
+        </div>
+        <script src="ac.js"></script>
+        <script src="location.js"></script>
+    </body>
+</html>
